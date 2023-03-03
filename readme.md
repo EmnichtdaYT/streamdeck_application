@@ -6,12 +6,12 @@ Clone this repository and install the [python-elgato-streamdeck](https://github.
 
 ### Quick install script for Linux with APT:
 ```bash
-mkdir streamdeck_application && cd streamdeck_application
-git clone https://github.com/EmnichtdaYT/streamdeck_application
-
 # Install python-elgato-streamdeck libary and it's dependencies
 sudo apt install -y libhidapi-libusb0
 pip install streamdeck
+
+# Clone the repo
+git clone https://github.com/EmnichtdaYT/streamdeck_application && cd streamdeck_application
 
 # Add udev rule to allow all users non-root access to Elgato StreamDeck devices
 sudo tee /etc/udev/rules.d/10-streamdeck.rules << EOF
@@ -20,4 +20,5 @@ sudo tee /etc/udev/rules.d/10-streamdeck.rules << EOF
 
 # Reload udev rules to ensure the new permissions take effect
 sudo udevadm control --reload-rules
+
 ```
