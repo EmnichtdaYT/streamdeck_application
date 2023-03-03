@@ -15,8 +15,8 @@ git clone https://github.com/EmnichtdaYT/streamdeck_application && cd streamdeck
 
 # Add udev rule to allow all users non-root access to Elgato StreamDeck devices
 sudo tee /etc/udev/rules.d/10-streamdeck.rules << EOF
-    SUBSYSTEMS=="usb", ATTRS{idVendor}=="0fd9", GROUP="users", TAG+="uaccess"
-    EOF
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0fd9", GROUP="users", TAG+="uaccess"
+EOF
 
 # Reload udev rules to ensure the new permissions take effect
 sudo udevadm control --reload-rules
