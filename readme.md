@@ -2,12 +2,12 @@
 A open-source cross plattform streamdeck software written in python
 
 ## Installation
-Clone this repository and install the [python-elgato-streamdeck](https://github.com/abcminiuser/python-elgato-streamdeck) libary
-
+Install python3, clone this repository and install the [python-elgato-streamdeck](https://github.com/abcminiuser/python-elgato-streamdeck) libary
 ### Quick install script for Linux with APT:
 ```bash
-# Install python-elgato-streamdeck libary and it's dependencies
-sudo apt install -y libhidapi-libusb0
+# Install dependencies
+sudo apt update
+sudo apt install -y libudev-dev libusb-1.0-0-dev libhidapi-libusb0 python3-pip python3-setuptools
 pip install streamdeck
 
 # Clone the repo
@@ -20,5 +20,5 @@ EOF
 
 # Reload udev rules to ensure the new permissions take effect
 sudo udevadm control --reload-rules
-
 ```
+To run the application, run `python3 main.py`
