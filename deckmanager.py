@@ -1,5 +1,7 @@
 from StreamDeck import DeviceManager
+from StreamDeck.Devices import StreamDeck
 
-def print_decks():
-    for deck in DeviceManager.DeviceManager().enumerate():
-        print(f'[{deck.id()}] {deck.deck_type()}')
+class Deck:
+    def __init__(self, stream_deck: StreamDeck):
+        self.stream_deck = stream_deck
+        
