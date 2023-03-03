@@ -1,8 +1,48 @@
-# streamdeck_application
+# \[WIP\] streamdeck_application
 A open-source cross plattform streamdeck software written in python
+<br>
+<br>
+<br>
+
+## Brainstorming / ideas / concepts
+Configs for streamdecks will be stored in seperate folders for every deck, identified by their serial number.
+This my first concept for the config.json for a streamdeck:
+```json
+{
+    "displayName": "ellu",
+    "menus": [
+        {
+            "name": "menu1",
+            "buttons": [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+            ]
+        },
+        {
+            "name": "menu2",
+            "buttons": [
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
+            ]
+        }
+    ]
+}
+```
+<br>
+<br>
+<br>
 
 ## Installation
 Install python3, clone this repository and install the [python-elgato-streamdeck](https://github.com/abcminiuser/python-elgato-streamdeck) libary
+
 ### Quick install script for Linux with APT:
 ```bash
 # Install dependencies
