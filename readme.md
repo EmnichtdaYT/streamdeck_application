@@ -6,6 +6,9 @@ Clone this repository and install the [python-elgato-streamdeck](https://github.
 
 ### Quick install script for Linux with APT:
 ```bash
+mkdir streamdeck_application && cd streamdeck_application
+git clone https://github.com/EmnichtdaYT/streamdeck_application
+
 # Install python-elgato-streamdeck libary and it's dependencies
 sudo apt install -y libhidapi-libusb0
 pip install streamdeck
