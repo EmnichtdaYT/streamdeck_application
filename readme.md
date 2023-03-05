@@ -9,32 +9,117 @@ Configs for streamdecks will be stored in seperate folders for every deck, ident
 This my first concept for the config.json for a streamdeck:
 ```json
 {
-    "displayName": "ellu",
-    "menus": [
+  "displayName": "zoe-streamdeck-mini",
+  "group": "devicegrp_default",
+  "menus": [
+    {
+      "name": "menu_1",
+      "buttons": [
+        {},
+        {},
+        {},
         {
-            "name": "menu1",
-            "buttons": [
-                {},
-                {},
-                {},
-                {},
-                {},
-                {}
-            ]
+          "name": "btn_standby",
+          "onRelease": [
+            {
+              "action_module": "device",
+              "action": "standby"
+            }
+          ],
+          "defaultBackgroundImage": "img_bg_power"
         },
+        "btn_menu_1",
+        "btn_menu_2"
+      ]
+    },
+    {
+      "name": "menu_2",
+      "buttons": [
+        {},
+        {},
+        {},
         {
-            "name": "menu2",
-            "buttons": [
-                {},
-                {},
-                {},
-                {},
-                {},
-                {}
-            ]
-        }
-    ]
+          "name": "btn_standby",
+          "onRelease": [
+            {
+              "action_module": "device",
+              "action": "standby"
+            }
+          ],
+          "defaultBackgroundImage": "img_bg_power"
+        },
+        "btn_menu_1",
+        "btn_menu_2"
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "name": "btn_menu_1",
+      "group": "btngrp_menu",
+      "onRelease": [
+        {
+          "action_module": "device",
+          "action": "openMenu",
+          "action_parameter": ["menu1"]
+        },
+        "func_btngrp_menu_removeOverlay_img_overlay_selected",
+        "func_self_addOverlay_img_overlay_selected"
+      ],
+      "defaultBackgroundImage": "img_bg_folder"
+    },
+    {
+      "name": "btn_menu_2",
+      "group": "btngrp_menu",
+      "onRelease": [
+        {
+          "action_module": "device",
+          "action": "openMenu",
+          "action_parameter": ["menu2"]
+        },
+        "func_btngrp_menu_removeOverlay_img_overlay_selected",
+        "func_self_addOverlay_img_overlay_selected"
+      ],
+      "defaultBackgroundImage": "img_bg_folder"
+    }
+  ],
+  "functions": [
+    {
+      "name": "func_btngrp_menu_removeOverlay_img_overlay_selected",
+      "onCall": {
+        "action_module": "button",
+        "action_target": "btngrp_menu",
+        "action": "removeOverlay",
+        "action_parameter": ["img_overlay_selected"]
+      }
+    },
+    {
+      "name": "func_self_addOverlay_img_overlay_selected",
+      "onCall": {
+        "action_module": "button",
+        "action": "addOverlay",
+        "action_parameter": ["img_overlay_selected"]
+      }
+    }
+  ],
+  "backgroundImages": [
+    {
+      "name": "img_bg_folder",
+      "imgPath": "./folder.png"
+    },
+    {
+      "name": "img_bg_power",
+      "imgPath": "./power.png"
+    }
+  ],
+  "overlayImages": [
+    {
+      "name": "img_overlay_selected",
+      "imgPath": "./selected.png"
+    }
+  ]
 }
+
 ```
 <br>
 <br>
