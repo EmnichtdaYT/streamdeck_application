@@ -22,6 +22,6 @@ def create_deckconfig(serial: str) -> bool:
 
     if not path.exists(deckconfig_file_path):
         with open(deckconfig_file_path, "w+") as deckconfig_file:
-            deckconfig_file.write("")
+            deckconfig_file.write("{}")
 
     return True

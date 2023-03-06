@@ -1,8 +1,8 @@
-import deckmanager
+import decks
 import deckconfig
 
 def main():
-    deckconfig.create_deckconfig("ass")
+    decks.load_decks()
 
 if __name__ == "__main__":
     main()
